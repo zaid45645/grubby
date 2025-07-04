@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Grubby!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>  
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-red-600">Grubby!</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#menu" class="hover:text-red-600">Menu</a>
+                <a href="#contact" class="hover:text-red-500">Contact</a>
+            </div>
+            <button id="navtog" class="md:hidden text-gray-600 hover:text-red-600">☰</button>
+        </div>
+        <div id="nav-content" class="hidden md:hidden text-center mt-2">
+            <a href="#menu" class="block py-2 hover:bg-gray-100">Menu</a>
+            <a href="#contact" class="block py-2 hover:bg-gray-100">Contact</a>
+        </div>
+
+    </nav>
+    <section class="hero-bg h-screen flex items-center justify-center text-white text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50 rounded-b-lg"></div>
+        <div class="z-10 p-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Taste the Burgers!</h1>
+            <p class="text-lg md:text-xl mb-6">Your go to store for burgers!</p>
+            <a href="#menu" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg">View Menu</a>
+        </div>
+    </section>
+    <section id="menu" class="py-12 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Burgers!</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                <img src="https://www.foodandwine.com/thmb/XE8ubzwObCIgMw7qJ9CsqUZocNM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MSG-Smash-Burger-FT-RECIPE0124-d9682401f3554ef683e24311abdf342b.jpg" alt="smash burger" class="w-full h-32 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold mb-2">Smash Burger</h3>
+                <p class="text-gray-600 mb-4">$12.99</p>
+                <button class="order-btn bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full" data-burger="Smash Burger">Order</button>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                <img src="https://cdn.sanity.io/images/g1s4qnmz/production/f8de3529e401762005059c9bdf7938fd06bd2b53-1500x1500.jpg" class="w-full h-32 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold mb-2">Chicken Sandwich</h3>
+                <p class="text-gray-600 mb-4">$15.99</p>
+                <button class="order-btn bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full" data-burger="Chicken Sandwich">Order</button>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                <img src="https://www.thecookingcollective.com.au/wp-content/uploads/2025/03/chicken-burgers-5-of-14.jpg" class="w-full h-32 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold mb-2">Chicken Zinger Burger</h3>
+                <p class="text-gray-600 mb-4">$8.99</p>
+                <button class="order-btn bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full" data-burger="Chicken Zinger Burger">Order</button>
+            </div>
+             <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                <img src="https://justcook.butcherbox.com/wp-content/uploads/2024/08/Mediterranean-Lamb-Burgers-with-Tzatziki-and-Pickled-Red-Onions-500x500.jpg" class="w-full h-32 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold mb-2">Lamb Burger</h3>
+                <p class="text-gray-600 mb-4">$12.99</p>
+                <button class="order-btn bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full" data-burger="Lamb Burger">Order</button>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                <img src="https://www.unileverfoodsolutions.com.sg/dam/global-ufs/mcos/SEA/calcmenu/recipes/SG-recipes/vegetables-&-vegetable-dishes/%E7%BB%8F%E5%85%B8%E8%8A%9D%E5%A3%AB%E6%B1%89%E5%A0%A1/main-header.jpg" class="w-full h-32 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold mb-2">Classic Burger</h3>
+                <p class="text-gray-600 mb-4">$12.99</p>
+                <button class="order-btn bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full" data-burger="Classic Burger">Order</button>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                <img src="https://embed.widencdn.net/img/beef/s3ccow03qm/1120x840px/Mushroom-Swiss-Burger-with-Jalapeno-Aioli_FY22_3.tif?keep=c&u=7fueml" class="w-full h-32 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mushroom Burger</h3>
+                <p class="text-gray-600 mb-4">$7.99</p>
+                <button class="order-btn bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full" data-burger="Mushroom Burger">Order</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-2">Email: info@example.com</p>
+            <p class="text-lg text-gray-700">Phone: (XXX) XXX XXX</p>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-6 text-center rounded-t-lg">
+        <p>&copy; 2025 Grubby!. All rights reserved.</p>
+    </footer>
+    <div id="order" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-sm w-full text-center">
+            <h3 class="text-2xl font-bold mb-4">Order Confirmation</h3>
+            <p id="modal-message" class="mb-6">You are about to order: </p>
+            <button id="close-modal" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full">Close</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('navtog').addEventListener('click', function() {
+            document.getElementById('nav-content').classList.toggle('hidden');
+        });
+        document.querySelectorAll('.order-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const burgerName = this.dataset.burger;
+                document.getElementById('modal-message').textContent = `You are about to order: ${burgerName}.`;
+                document.getElementById('order').classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('close-modal').addEventListener('click', function() {
+            document.getElementById('order').classList.add('hidden');
+        });
+    </script>
+    
+</body>
+</html>
